@@ -1,20 +1,46 @@
 <!DOCTYPE html>
  <html>
  <head>
-<body>
-{background: linear-gradient(to right, #ff7e5f, #feb47b);}
-</body>
- <title>zheng chicken games</title>
+  <title>zheng chicken games</title>
+  <style>
+    body {
+      background-image: url("https://wallpapers.com/images/hd/cute-blue-spongebob-and-patrick-desktop-zp7fh3bs7khf40x2.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .game-box {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .game-box:hover {
+      transform: scale(1.05);
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-  <h1>msg me on my pixilart acc or smth idk @zhengchicken </h1>
-</body>  
-</html>
-<iframe src="https://cloud.onlinegames.io/games/2024/unity3/block-blast/index-og.html" width="400" height="400" style="border:2px solid blue;"></iframe>
-<p>more will be added soon this is just a project for rn</p>
-<div> 
-<div style="border: 4px dashed blue;padding:10px;margin-bottom:20px;">
-<h2>More Block Games</h2>
-<iframe src="https://cloud.onlinegames.io/games/2024/construct/299/geometry-escape/index-og.html" width="800" height="600" style="border:2px solid blue;"></iframe> 
+
+  <h1 style="text-align:center; color:white;">Game Hub</h1>
+
+  <div class="game-grid">
+    <a href="https://cloud.onlinegames.io/games/2024/unity3/block-blast/index-og.html" class="game-box">Game 1</a>
+    <a href="game2.html" class="game-box">Game 2</a>
+    <a href="game3.html" class="game-box">Game 3</a>
+  </div>
+
 <iframe src="https://cloud.onlinegames.io/games/2025/html/cube-worlds/index-og.html" width="800" height="600" style="border:2px solid blue;"></iframe>
 </div>
