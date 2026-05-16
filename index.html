@@ -1,130 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>zheng chicken games</title>
-<style>
-body {
-background-image: url("https://tse2.mm.bing.net/th/id/OIP.4-wFSIchMcFQ0Q329ecDPgHaFF?rs=1&pid=ImgDetMain&o=7&rm=3");
-background-size: cover;
-background-positon: center;
-font-family: Arial; 
-}
-</head>
-</style>
-<iframe src= "https://ubg77.gitlab.io/sushi-party-io/" width="600" height="500"></iframe>  
-</html>
-website/
-   index.html
-   style.css
 
-   games/
-      narrow/
-         index.html
-         game.html
-         game.js
-         thumb.png  
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Game Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>zheng chicken games</title>
+
+  <style>
+    body {
+      background-image: url("https://tse2.mm.bing.net/th/id/OIP.4-wFSIchMcFQ0Q329ecDPgHaFF?rs=1&pid=ImgDetMain&o=7&rm=3");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial;
+      text-align: center;
+      color: white;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 200px);
+      gap: 20px;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .game-card {
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>My Game Website</h1>
+<h1>zheng chicken games</h1>
 
 <div class="game-grid">
 
-  <!-- NARROW GAME CARD -->
-  <a class="game-card" href="games/narrow/index.html">
-    <img src="games/narrow/thumb.png">
-    <p>Narrow</p>
+  <!-- EXAMPLE GAME CARD (like Subway Surfers on Poki) -->
+  <a class="game-card" href="https://ubg77.gitlab.io/sushi-party-io" target="_blank">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.4-wFSIchMcFQ0Q329ecDPgHaFF?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <p>Sushi Party</p>
   </a>
 
 </div>
 
 </body>
 </html>
-body {
-  background: #f2f2f2;
-  font-family: Arial;
-  text-align: center;
-}
-
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.game-card {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: black;
-  box-shadow: 0 0 10px #ccc;
-}
-
-.game-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.game-container {
-  width: 800px;
-  height: 600px;
-  margin: auto;
-}
-
-.game-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Narrow</title>
-  <link rel="stylesheet" href="../../style.css">
-</head>
-<body>
-
-<h1>Narrow</h1>
-
-<div class="game-container">
-  <iframe src="game.html" class="game-frame"></iframe>
-</div>
-
-<h2>More Games</h2>
-
-<div class="game-grid">
-  <!-- Add more games here later -->
-</div>
-
-</body>
-</html>
-<canvas id="game"></canvas>
-<script src="game.js"></script>
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
-
-canvas.width = 800;
-canvas.height = 600;
-
-let x = 0;
-
-function loop() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "blue";
-  ctx.fillRect(x, 250, 50, 50);
-  x += 3;
-  requestAnimationFrame(loop);
-}
-
-loop();
-
 
 
