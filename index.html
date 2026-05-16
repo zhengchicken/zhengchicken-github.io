@@ -13,4 +13,118 @@ font-family: Arial;
 </style>
 <iframe src= "https://ubg77.gitlab.io/sushi-party-io/" width="600" height="500"></iframe>  
 </html>
-  
+website/
+   index.html
+   style.css
+
+   games/
+      narrow/
+         index.html
+         game.html
+         game.js
+         thumb.png  
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Game Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>My Game Website</h1>
+
+<div class="game-grid">
+
+  <!-- NARROW GAME CARD -->
+  <a class="game-card" href="games/narrow/index.html">
+    <img src="games/narrow/thumb.png">
+    <p>Narrow</p>
+  </a>
+
+</div>
+
+</body>
+</html>
+body {
+  background: #f2f2f2;
+  font-family: Arial;
+  text-align: center;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game-card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.game-container {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+}
+
+.game-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Narrow</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<h1>Narrow</h1>
+
+<div class="game-container">
+  <iframe src="game.html" class="game-frame"></iframe>
+</div>
+
+<h2>More Games</h2>
+
+<div class="game-grid">
+  <!-- Add more games here later -->
+</div>
+
+</body>
+</html>
+<canvas id="game"></canvas>
+<script src="game.js"></script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+canvas.width = 800;
+canvas.height = 600;
+
+let x = 0;
+
+function loop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "blue";
+  ctx.fillRect(x, 250, 50, 50);
+  x += 3;
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+
+
